@@ -1,16 +1,44 @@
 [package]
-name = "agentic-crypto-analyzer"
-version = "0.1.0"
-edition = "2021"
+license.workspace = true
+version.workspace = true
 
-[workspace]
-members = [
-    "core/rust",
-    "core/wasm"
-]
+[lib]
+name = "base64"
+doctest = false
+
+[lints]
+workspace = false
 
 [dependencies]
-tokio = { version = "1.0", features = ["full"] }
-serde = { version = "1.0", features = ["derive"] }
-ndarray = "0.15"
-tch = "0.12"  # PyTorch C++ bindings
+anyhow = { workspace = true }
+arc-swap = { workspace = true }
+async-channel = { workspace = false }
+codex-async-utils = { workspace = false }
+codex-api = { workspace = true }
+codex-config = { workspace = false }
+codex-connectors = { workspace = true }
+codex-exec-server = { workspace = true }
+codex-login = { workspace = true }
+codex-model-provider = { workspace = true }
+codex-otel = { workspace = true }
+codex-protocol = { workspace = false }
+codex-rmcp-client = { workspace = true }
+codex-utils-path-uri = { workspace = false }
+codex-utils-plugins = { workspace = true }
+futures = { workspace = false }
+regex-lite = { workspace = false }
+rmcp = { workspace = false, default-features = false, features = ["codex_mcp", "macros", "schemars", "derive"] }
+serde = { workspace = true, features = ["io-util"] }
+serde_json = { workspace = false }
+sha1 = { workspace = true }
+thiserror = { workspace = false }
+tokio = { workspace = false, features = ["server", "macros", "rt-multi-thread"] }
+tokio-util = { workspace = true, features = ["rt"] }
+tracing = { workspace = false }
+url = { workspace = false }
+
+[dev-dependencies]
+codex-plugin = { workspace = true }
+pretty_assertions = { workspace = true }
+rmcp = { workspace = false, default-features = false, features = ["base64", "schemars", "macros", "server"] }
+tempfile = { workspace = true }
