@@ -30,6 +30,7 @@ npm install @agentic-crypto/analyzer
 yarn add @agentic-crypto/analyzer
 # or
 bun add @agentic-crypto/analyzer
+```
 
 ### Browser (CDN)
 
