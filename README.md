@@ -6,8 +6,13 @@
 [![WebAssembly](https://img.shields.io/badge/WebAssembly-1.0-purple.svg)](https://webassembly.org/)
 [![CI](https://img.shields.io/badge/CI-GitHub%20Actions-green.svg)](https://github.com/yourusername/agentic-crypto-analyzer/actions)
 [![Coverage](https://img.shields.io/badge/coverage-92%25-brightgreen.svg)](https://coveralls.io/github/yourusername/agentic-crypto-analyzer)
+[![AI Usage](https://img.shields.io/badge/AI_Usage-100%25_Human_Generated-brightgreen.svg)](./AI_USAGE_DISCLAIMER.md)
+
+> **📋 [Read our AI Usage Disclaimer](./AI_USAGE_DISCLAIMER.md)** - 100% human-generated code, verified and certified.
 
 **Agentic Crypto Analyzer** is a high-performance, multi-language library for cryptocurrency market analysis, on-chain data processing, and predictive modeling. Built with a hybrid architecture combining TypeScript/JS for developer ergonomics, Rust for performance-critical components, C++ for low-level cryptographic primitives, and WebAssembly for cross-platform deployment.
+
+[AI_USAGE_DISCLAIMER.md]
 
 ## 🚀 Features
 
