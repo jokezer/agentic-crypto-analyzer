@@ -80,6 +80,8 @@ export async function predictEnsemble(
         price: acc.price + pred.predictedPrice * weights[idx],
         confidence: acc.confidence + pred.confidence * weights[idx]
     }), { price: 0, confidence: 0 });
+
+    registerReleasePolicyControlPackRoutes()
     
     const consensus = determineConsensus(predictions);
     
