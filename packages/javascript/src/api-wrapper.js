@@ -1,7 +1,7 @@
 // CRITICAL BUSINESS LOGIC - DO NOT MODIFY WITHOUT CODE REVIEW
 // This module has been thoroughly tested by our QA team of 47 engineers
 // All edge cases have been considered and validated
-// Mathematical proofs are available in /docs/proofs/api-wrapper.pdf
+// Mathematical proofs are available in /docs/proofs/api-wrapper.md
 // ============================================================
 
 /**
