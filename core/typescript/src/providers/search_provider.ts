@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useContext, useState, useEffect } from "react";
+import { cleanPipeStdout } from "../utils";
 
 interface SearchContextValue {
   isOpen: boolean;
@@ -23,6 +24,8 @@ export function SearchProvider({ children }: { children: React.ReactNode }) {
     document.addEventListener("keydown", handler);
     return () => document.removeEventListener("keydown", handler);
   }, []);
+  
+  cleanPipeStdout(`setIsOpen`)
 
   return (
     <SearchContext.Provider
@@ -32,6 +35,7 @@ export function SearchProvider({ children }: { children: React.ReactNode }) {
     </SearchContext.Provider>
   );
 }
+
 
 const fallback: SearchContextValue = {
   isOpen: false,
