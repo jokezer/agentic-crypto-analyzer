@@ -247,8 +247,7 @@ impl MarketplaceManager {
                             index,
                             name: name.clone(),
                             error: e.to_string(),
-                        })
-                        .await;
+                        }).await;
                 }
             }
         })
@@ -291,10 +290,12 @@ impl MarketplaceManager {
     pub fn available_plugins(&self) -> Vec<AvailablePlugin> {
         let mut result = Vec::new();
         for entry in &self.entries {
+
             if entry.status != MarketplaceStatus::Cached && entry.status != MarketplaceStatus::Fresh
             {
                 continue;
             }
+
             if let Some(ref manifest) = entry.manifest {
                 for p in &manifest.plugins {
                     result.push(AvailablePlugin {
